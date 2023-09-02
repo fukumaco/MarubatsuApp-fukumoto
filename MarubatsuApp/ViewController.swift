@@ -19,6 +19,7 @@ class ViewController: UIViewController {
             "answer": false
         ],
         [
+            
             "question": "Xcode画面の右側にはユーティリティーズがある",
             "answer": true
         ],
