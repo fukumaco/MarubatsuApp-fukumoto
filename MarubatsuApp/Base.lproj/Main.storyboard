@@ -11,17 +11,17 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarubatsuApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="MarubatsuApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Lif-Dg-kCl">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="17" width="393" height="842"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZH-eF-g0d">
-                                        <rect key="frame" x="20" y="625.66666666666663" width="172.66666666666666" height="172.33333333333337"/>
+                                        <rect key="frame" x="20" y="649.66666666666663" width="172.66666666666666" height="172.33333333333337"/>
                                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UZH-eF-g0d" secondAttribute="height" multiplier="1:1" id="Mps-Hj-hdr"/>
@@ -35,8 +35,8 @@
                                             <action selector="tappedNoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="COv-LQ-fqt"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-P8-ix0">
-                                        <rect key="frame" x="20" y="67" width="353" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-P8-ix0">
+                                        <rect key="frame" x="20" y="101" width="353" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Rrz-cd-9cv"/>
                                         </constraints>
@@ -45,7 +45,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94j-Gu-fPc">
-                                        <rect key="frame" x="200.66666666666663" y="625.66666666666663" width="172.33333333333337" height="172.33333333333337"/>
+                                        <rect key="frame" x="200.66666666666663" y="649.66666666666663" width="172.33333333333337" height="172.33333333333337"/>
                                         <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -56,18 +56,29 @@
                                             <action selector="tappedYesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kl0-Sx-RNN"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdV-Lk-2oB">
+                                        <rect key="frame" x="70" y="42" width="253" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="問題を作成する"/>
+                                        <connections>
+                                            <segue destination="Spp-gB-qo9" kind="presentation" id="7jc-e8-ds0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="Rud-ep-x7M"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="94j-Gu-fPc" firstAttribute="leading" secondItem="UZH-eF-g0d" secondAttribute="trailing" constant="8" id="1zM-vB-fpO"/>
+                                    <constraint firstItem="Rud-ep-x7M" firstAttribute="trailing" secondItem="FdV-Lk-2oB" secondAttribute="trailing" constant="70" id="4To-zV-YoP"/>
                                     <constraint firstItem="94j-Gu-fPc" firstAttribute="width" secondItem="UZH-eF-g0d" secondAttribute="width" id="DgZ-JU-vkW"/>
                                     <constraint firstItem="Rud-ep-x7M" firstAttribute="bottom" secondItem="UZH-eF-g0d" secondAttribute="bottom" constant="20" id="Efn-2A-Wg3"/>
                                     <constraint firstItem="Rud-ep-x7M" firstAttribute="trailing" secondItem="94j-Gu-fPc" secondAttribute="trailing" constant="20" id="Ey5-M3-x0R"/>
-                                    <constraint firstItem="3f1-P8-ix0" firstAttribute="top" secondItem="Rud-ep-x7M" secondAttribute="top" constant="8" id="J4J-3T-eau"/>
+                                    <constraint firstItem="3f1-P8-ix0" firstAttribute="top" secondItem="Rud-ep-x7M" secondAttribute="top" constant="100" id="J4J-3T-eau"/>
                                     <constraint firstItem="Rud-ep-x7M" firstAttribute="bottom" secondItem="94j-Gu-fPc" secondAttribute="bottom" constant="20" id="MDe-MU-9fE"/>
                                     <constraint firstItem="94j-Gu-fPc" firstAttribute="height" secondItem="UZH-eF-g0d" secondAttribute="height" id="V0f-1H-wxo"/>
+                                    <constraint firstItem="FdV-Lk-2oB" firstAttribute="leading" secondItem="Rud-ep-x7M" secondAttribute="leading" constant="70" id="YOS-Fw-v5r"/>
                                     <constraint firstItem="Rud-ep-x7M" firstAttribute="trailing" secondItem="3f1-P8-ix0" secondAttribute="trailing" constant="20" id="aQa-WN-vUx"/>
+                                    <constraint firstItem="FdV-Lk-2oB" firstAttribute="top" secondItem="Lif-Dg-kCl" secondAttribute="top" constant="50" id="ihf-I8-qoX"/>
                                     <constraint firstItem="3f1-P8-ix0" firstAttribute="leading" secondItem="Rud-ep-x7M" secondAttribute="leading" constant="20" id="kIE-Tl-zyW"/>
                                     <constraint firstItem="UZH-eF-g0d" firstAttribute="leading" secondItem="Rud-ep-x7M" secondAttribute="leading" constant="20" id="uyl-oh-i0W"/>
                                 </constraints>
@@ -82,12 +93,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87.786259541984734" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="88" y="-3"/>
+        </scene>
+        <!--Create Question View Controller-->
+        <scene sceneID="a7S-fU-sU5">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Spp-gB-qo9" customClass="CreateQuestionViewController" customModule="MarubatsuApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dga-mG-yeH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRt-sS-Yp9">
+                                <rect key="frame" x="95" y="61" width="193" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="T0Pに戻る"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="zRt-sS-Yp9" id="NKA-GJ-rNs">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onD-9F-rRt">
+                                <rect key="frame" x="100" y="560" width="193" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="問題を全て削除"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WH7-9M-lmA">
+                                <rect key="frame" x="120" y="350" width="153" height="32"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <segments>
+                                    <segment title="X"/>
+                                    <segment title="○"/>
+                                </segments>
+                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Shh-ys-Kan">
+                                <rect key="frame" x="20" y="201" width="353" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K0-jw-j59">
+                                <rect key="frame" x="120" y="440" width="153" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="問題を保存する"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Xp-zO-Dk5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9K0-jw-j59" firstAttribute="leading" secondItem="0Xp-zO-Dk5" secondAttribute="leading" constant="120" id="7IJ-NP-VCn"/>
+                            <constraint firstItem="0Xp-zO-Dk5" firstAttribute="trailing" secondItem="9K0-jw-j59" secondAttribute="trailing" constant="120" id="7QW-Cc-1cb"/>
+                            <constraint firstItem="zRt-sS-Yp9" firstAttribute="top" secondItem="0Xp-zO-Dk5" secondAttribute="top" constant="50" id="7b3-sv-K1e"/>
+                            <constraint firstItem="0Xp-zO-Dk5" firstAttribute="trailing" secondItem="zRt-sS-Yp9" secondAttribute="trailing" constant="100" id="J0Z-a6-SLp"/>
+                            <constraint firstItem="Shh-ys-Kan" firstAttribute="leading" secondItem="0Xp-zO-Dk5" secondAttribute="leading" constant="20" id="JLA-J5-ulp"/>
+                            <constraint firstItem="WH7-9M-lmA" firstAttribute="leading" secondItem="0Xp-zO-Dk5" secondAttribute="leading" constant="120" id="Opk-Rg-3Cz"/>
+                            <constraint firstItem="9K0-jw-j59" firstAttribute="top" secondItem="WH7-9M-lmA" secondAttribute="bottom" constant="50" id="SI1-OH-Kxc"/>
+                            <constraint firstItem="onD-9F-rRt" firstAttribute="leading" secondItem="0Xp-zO-Dk5" secondAttribute="leading" constant="100" id="TXs-22-muy"/>
+                            <constraint firstItem="Shh-ys-Kan" firstAttribute="top" secondItem="zRt-sS-Yp9" secondAttribute="bottom" constant="100" id="TtK-VU-8Pb"/>
+                            <constraint firstItem="zRt-sS-Yp9" firstAttribute="leading" secondItem="0Xp-zO-Dk5" secondAttribute="leading" constant="100" id="WBd-M3-wVF"/>
+                            <constraint firstItem="0Xp-zO-Dk5" firstAttribute="trailing" secondItem="WH7-9M-lmA" secondAttribute="trailing" constant="120" id="YIk-vv-H54"/>
+                            <constraint firstItem="0Xp-zO-Dk5" firstAttribute="trailing" secondItem="Shh-ys-Kan" secondAttribute="trailing" constant="20" id="a01-Kl-pRX"/>
+                            <constraint firstItem="WH7-9M-lmA" firstAttribute="top" secondItem="Shh-ys-Kan" secondAttribute="bottom" constant="50" id="d0X-CM-fDi"/>
+                            <constraint firstItem="onD-9F-rRt" firstAttribute="top" secondItem="9K0-jw-j59" secondAttribute="bottom" constant="70" id="fVp-Bh-uZg"/>
+                            <constraint firstItem="0Xp-zO-Dk5" firstAttribute="trailing" secondItem="onD-9F-rRt" secondAttribute="trailing" constant="100" id="gce-6d-WAF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZF-0x-eG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742.74809160305335" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
