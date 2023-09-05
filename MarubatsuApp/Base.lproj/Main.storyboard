@@ -11,17 +11,17 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="MarubatsuApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="MarubatsuApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Lif-Dg-kCl">
-                                <rect key="frame" x="0.0" y="17" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="17" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZH-eF-g0d">
-                                        <rect key="frame" x="20" y="649.66666666666663" width="172.66666666666666" height="172.33333333333337"/>
+                                        <rect key="frame" x="20" y="625.66666666666663" width="172.66666666666666" height="172.33333333333337"/>
                                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UZH-eF-g0d" secondAttribute="height" multiplier="1:1" id="Mps-Hj-hdr"/>
@@ -32,7 +32,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="tappedNoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="COv-LQ-fqt"/>
+                                            <action selector="tappedNoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iny-ks-mAw"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-P8-ix0">
@@ -45,7 +45,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94j-Gu-fPc">
-                                        <rect key="frame" x="200.66666666666663" y="649.66666666666663" width="172.33333333333337" height="172.33333333333337"/>
+                                        <rect key="frame" x="200.66666666666663" y="625.66666666666663" width="172.33333333333337" height="172.33333333333337"/>
                                         <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -53,7 +53,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="tappedYesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kl0-Sx-RNN"/>
+                                            <action selector="tappedYesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Va-rA-XbZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdV-Lk-2oB">
@@ -61,7 +61,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="問題を作成する"/>
                                         <connections>
-                                            <segue destination="Spp-gB-qo9" kind="presentation" id="7jc-e8-ds0"/>
+                                            <action selector="createQuestionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LNJ-Fv-2BA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -87,8 +87,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cBM-b3-gyF"/>
                     <connections>
-                        <outlet property="questionLabel" destination="3f1-P8-ix0" id="HbK-Kg-zdK"/>
+                        <outlet property="questionLabel" destination="3f1-P8-ix0" id="vcA-eO-YGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,8 +99,8 @@
         <!--Create Question View Controller-->
         <scene sceneID="a7S-fU-sU5">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Spp-gB-qo9" customClass="CreateQuestionViewController" customModule="MarubatsuApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dga-mG-yeH">
+                <viewController storyboardIdentifier="CreateQuestionViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Spp-gB-qo9" customClass="CreateQuestionViewController" customModule="MarubatsuApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dga-mG-yeH" customClass="questionTextField" customModule="MarubatsuApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -108,9 +109,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="T0Pに戻る"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="zRt-sS-Yp9" id="NKA-GJ-rNs">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="backButtonTapped:" destination="Spp-gB-qo9" eventType="touchUpInside" id="KHp-Gi-GpU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onD-9F-rRt">
@@ -166,6 +165,7 @@
                             <constraint firstItem="0Xp-zO-Dk5" firstAttribute="trailing" secondItem="onD-9F-rRt" secondAttribute="trailing" constant="100" id="gce-6d-WAF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="alU-PX-2oN"/>
                     <connections>
                         <outlet property="answerSegmentedControl" destination="WH7-9M-lmA" id="BlD-ki-diX"/>
                         <outlet property="questionTextField" destination="Shh-ys-Kan" id="KiW-7V-9b6"/>

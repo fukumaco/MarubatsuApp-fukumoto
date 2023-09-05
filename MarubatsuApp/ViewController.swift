@@ -3,8 +3,6 @@
 //  MarubatsuApp
 //  Created by Fukumoto Asako on 2023/09/02.
 //
-/////Automatic表示されているとOK
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -16,19 +14,7 @@ class ViewController: UIViewController {
     
 
      var questions: [[String: Any]] = [
-     //        [
-     //            "question": "iPhoneアプリを開発する統合環境はZcodeである",
-     //            "answer": false
-     //        ],
-     //        [
-     //            "question": "Xcode画面の右側にはユーティリティーズがある",
-     //            "answer": true
-     //        ],
-     //        [
-     //            "question": "UILabelは文字列を表示する際に利用する",
-     //            "answer": true
-     //        ]
-     ]
+  ]
 
     
     override func viewDidLoad() {
@@ -66,10 +52,10 @@ class ViewController: UIViewController {
                 // When correct answer
                 // Plus 1 to currentQuestionNum and next question
                 currentQuestionNum += 1
-                showAlert(message: "正解!")
+                showAlert(message: "正解")
             } else {
                 // When incorrect
-                showAlert(message: "不正解!")
+                showAlert(message: "不正解")
             }
             
         } else { // When not answer

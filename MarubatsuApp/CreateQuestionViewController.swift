@@ -10,7 +10,9 @@ import UIKit
 protocol CreateQuestionDelegate {
     func didUpdateQuestions(updatedQuestions: [[String : Any]])
 }
+
 class CreateQuestionViewController: UIViewController {
+   
     
     @IBOutlet weak var questionTextField: UITextView!
     @IBOutlet weak var answerSegmentedControl: UISegmentedControl!
@@ -21,11 +23,9 @@ class CreateQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
         // 指示文を設定
-        
-        questionTextField.placeholder = "問題文を入力してください"
-    }
+   // questionTextField.placeholder = "問題文を入力してください" 
     
     
     
@@ -78,29 +78,3 @@ class CreateQuestionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-/*
- import UIKit
- 
- class CreateQuestionViewController: UIViewController {
- 
- override func viewDidLoad() {
- super.viewDidLoad()
- 
- // Do any additional setup after loading the view.
- }
- 
- 
- /*
-  // MARK: - Navigation
-  
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-  // Get the new view controller using segue.destination.
-  // Pass the selected object to the new view controller.
-  }
-  */
- 
- }
- */
-
