@@ -12,7 +12,7 @@ protocol CreateQuestionDelegate {
 }
 
 class CreateQuestionViewController: UIViewController {
-   
+    
     
     @IBOutlet weak var questionTextField: UITextView!
     @IBOutlet weak var answerSegmentedControl: UISegmentedControl!
@@ -23,13 +23,13 @@ class CreateQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // 指示文を設定
-   // questionTextField.placeholder = "問題文を入力してください" 
-    
-    
-    
-    // 問題を保存するボタンのアクション
+       //   questionTextField.placeholder = "問題文を入力してください"
+        
+        // 問題を保存するボタンのアクション
+    }
     @IBAction func saveQuestionButtonTapped(_ sender: Any) {
         guard let questionText = questionTextField.text, !questionText.isEmpty else {
             showAlert(message: "問題を入力してください")
@@ -69,12 +69,13 @@ class CreateQuestionViewController: UIViewController {
 }
 
 
-    /*
-    // MARK: - Navigation
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
